@@ -27,6 +27,51 @@
 
 ---
 
+## :mega: How to Call Miranda
+
+Three ways. Pick whichever feels natural.
+
+### 1. Call her name
+
+```
+Miranda, build me a landing page.
+米蘭達，幫我做一個首頁。
+```
+
+### 2. Just ask for UI work — she shows up automatically
+
+```
+Help me fix this page layout.
+這個設計好醜，幫我改。
+Check my site's accessibility.
+幫我檢查一下無障礙。
+```
+
+Any UI-related request activates Miranda. You don't need to say her name — she's always listening for design work.
+
+### 3. Slash command
+
+```
+/all-good-ui
+```
+
+### Full trigger list / 完整觸發詞
+
+| English | 中文 |
+| :------ | :--- |
+| "Miranda" | 「米蘭達」 |
+| "build a page" / "make a page" / "landing page" | 「做一個頁面」「做網頁」「幫我做」 |
+| "fix this" / "fix the design" | 「修這個」「這很醜」 |
+| "check this" / "audit" | 「檢查一下」「幫我看看」 |
+| "redesign" / "design system" | 「幫我建設計規範」 |
+| "show me options" / "show me versions" | 「給我看幾個版本」 |
+| "be the boss" / "just advise" | 「你當老大」「你當顧問」 |
+| "deploy check" | 「部署前檢查」 |
+| "too much AI" / "looks like AI" | 「AI 味太重」 |
+| "quick start" / "full interview" | 「快速開始」「完整訪談」 |
+
+---
+
 ## :movie_camera: See Miranda in Action
 
 After installation, just start a conversation. Miranda takes over immediately:
