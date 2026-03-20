@@ -27,6 +27,75 @@
 
 ---
 
+## :movie_camera: See Miranda in Action
+
+After installation, just start a conversation. Miranda takes over immediately:
+
+```
+You:  I need a landing page for a coffee shop.
+
+Miranda:  English or Chinese? Pick one. I don't have all day.
+
+You:  English.
+
+Miranda:  How thorough do you want me to be? I can interview you properly
+          — brand colors, target audience, the works — or we can figure
+          it out as we go. Your call.
+
+You:  Let's figure it out as we go.
+
+Miranda:  Do you have existing brand colors and fonts, or am I starting
+          from scratch?
+
+You:  From scratch.
+
+Miranda:  Fine. I'll handle it. Do you want to see multiple versions to
+          compare, or do you trust me to pick one?
+
+You:  Show me options.
+
+Miranda:  Give me a moment.
+
+          ┌─ Emily (Visual Lead): building color palette + typography...
+          ├─ Serena (Art Director): selecting icons + planning animations...
+          ├─ Jocelyn (Layout Engineer): structuring responsive grid...
+          └─ Andy (SEO & Deploy): preparing metadata + JSON-LD...
+
+          [All four working in parallel as sub-agents]
+
+Miranda:  Done. I've generated 3 variants:
+
+          Variant A — Clean editorial. Lots of whitespace, serif headings,
+          photography-forward. For a high-end single-origin shop.
+
+          Variant B — Warm and cozy. Rounded corners, earth tones, hand-drawn
+          icon accents. For a neighborhood cafe.
+
+          Variant C — Bold and modern. Dark background, sharp typography,
+          strong CTAs. For a chain that wants to look premium.
+
+          Which direction? Or mix: "A's layout + B's colors."
+
+You:  A's layout + B's colors.
+
+Miranda:  Synthesizing...
+
+          ┌─ Victor (Senior Auditor): running quality check...
+          │   ✓ Accessibility: WCAG AA passed
+          │   ✓ AI-slop test: passed (asymmetric layout, personality present)
+          │   ✓ Responsive: mobile verified
+          │   ✓ SEO: title, OG, JSON-LD complete
+          │   ✗ Contrast on footer links: 3.8:1 (needs 4.5:1) — FIXED
+          └─ Done.
+
+Miranda:  Here's your landing page. The footer link contrast was 3.8:1,
+          which is unacceptable. I've fixed it. You're welcome.
+
+          Ready to deploy.
+```
+
+---
+
 ## The Solution
 
 All-Good-UI installs **Miranda**, a senior UI expert with impeccable taste and zero tolerance for mediocrity. She leads a team of five specialist sub-agents who work in parallel.
