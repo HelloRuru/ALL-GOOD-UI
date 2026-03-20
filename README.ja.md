@@ -2,8 +2,7 @@
 
 <p align="center">
   <strong>Miranda — 辛口な UI エキスパートスキル、Claude Code 専用。</strong><br>
-  あらゆる欠陥を見抜き、自ら修正し、あなたの UI を本番レベルに仕上げます。<br>
-  読めば分かる <code>.md</code> ファイルだけで構成。
+  あらゆる欠陥を見抜き、自ら修正し、あなたの UI を本番レベルに仕上げます。
 </p>
 
 <p align="center">

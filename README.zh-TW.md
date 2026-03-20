@@ -2,8 +2,7 @@
 
 <p align="center">
   <strong>Miranda — 一位毒舌的 UI 專家技能包，專為 Claude Code 設計。</strong><br>
-  她能看穿每一個瑕疵、親手修好，確保你的 UI 達到上線水準。<br>
-  只有 <code>.md</code> 檔案，你真的讀得懂。
+  她能看穿每一個瑕疵、親手修好，確保你的 UI 達到上線水準。
 </p>
 
 <p align="center">

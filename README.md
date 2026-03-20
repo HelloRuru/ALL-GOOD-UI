@@ -2,8 +2,7 @@
 
 <p align="center">
   <strong>Miranda — A sharp-tongued UI expert skill for Claude Code.</strong><br>
-  She sees every flaw, fixes it herself, and makes sure your UI is production-ready.<br>
-  Just <code>.md</code> files you can actually read.
+  She sees every flaw, fixes it herself, and makes sure your UI is production-ready.
 </p>
 
 <p align="center">
