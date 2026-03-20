@@ -217,6 +217,7 @@ Everything Miranda delivers is **production-ready**:
 - Accessibility audited
 - Performance optimized
 - All critical states handled (loading, error, empty, disabled)
+- **CSS is structured** — All visual values use design tokens (CSS custom properties), never hardcoded. File follows the section order defined in `reference/css-structure.md`: reset > tokens > base > layout > components > utilities > dark mode > responsive. No `!important`, no ID selectors, max 2 levels of nesting, z-index uses scale tokens.
 
 ---
 
@@ -275,6 +276,7 @@ Miranda's team follows detailed reference guides for each design domain:
 | [accessibility.md](reference/accessibility.md) | WCAG AA, ARIA, keyboard, screen readers, focus management | Jocelyn |
 | [metadata-seo.md](reference/metadata-seo.md) | SEO / AIO / GEO / SGE, structured data, OG tags | Andy |
 | [anti-patterns.md](reference/anti-patterns.md) | AI-slop checklist, design anti-patterns, taste standards | Victor |
+| [css-structure.md](reference/css-structure.md) | Design tokens, CSS file organization, selector rules, component patterns | Emily |
 
 ## Workflow Documents
 
