@@ -132,9 +132,59 @@ All-Good-UI installs **Miranda**, a senior UI expert with impeccable taste and z
 git clone https://github.com/HelloRuru/ALL-GOOD-UI.git ~/.claude/skills/all-good-ui
 ```
 
-**Step 2** -- That's it. Miranda activates automatically when you start a conversation.
+**Step 2** -- Register the auto-trigger hook so Miranda activates when you mention her name or any UI-related keyword:
 
-**Step 3 (Optional)** -- Install Better Icons MCP for 200,000+ icon search:
+<details>
+<summary><strong>Click to expand hook setup</strong></summary>
+
+Add to `~/.claude/settings.json` inside the `"hooks"` section:
+
+```json
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"~/.claude/skills/all-good-ui/hooks/miranda-trigger.js\""
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+Replace `~` with your actual home directory path if needed.
+
+</details>
+
+**Step 3** -- Done. Say "Miranda" or ask any UI question, and she takes over.
+
+**Step 4 (Optional)** -- Supercharge Miranda with [Claude Teams Go](https://github.com/HelloRuru/claude-teams-go) for structured multi-agent orchestration:
+
+<details>
+<summary><strong>Click to expand</strong></summary>
+
+Teams Go provides a blueprint-based workflow engine for Claude Code. Miranda's 5 sub-agents can be dispatched as a coordinated team with built-in quality gates and retry logic.
+
+```bash
+git clone https://github.com/HelloRuru/claude-teams-go.git ~/claude-teams-go
+```
+
+Then copy the included blueprint:
+
+```bash
+cp ~/.claude/skills/all-good-ui/hooks/miranda-blueprint.md ~/claude-teams-go/blueprints/
+```
+
+See [Claude Teams Go README](https://github.com/HelloRuru/claude-teams-go) for setup details.
+
+</details>
+
+**Step 5 (Optional)** -- Install Better Icons MCP for 200,000+ icon search:
 
 <details>
 <summary><strong>Click to expand</strong></summary>
