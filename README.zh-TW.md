@@ -6,10 +6,15 @@
 </p>
 
 <p align="center">
+  <img src="https://img.shields.io/badge/version-v2.0-D4A5A5?style=flat-square" alt="Version 2.0">
   <img src="https://img.shields.io/badge/license-MIT-D4A5A5?style=flat-square" alt="MIT License">
   <img src="https://img.shields.io/badge/claude_code-skill-B8A9C9?style=flat-square" alt="Claude Code Skill">
   <img src="https://img.shields.io/badge/dependencies-zero-A8B5A0?style=flat-square" alt="Zero Dependencies">
-  <img src="https://img.shields.io/badge/files-13%20docs-E8B4B8?style=flat-square" alt="13 Documents">
+  <img src="https://img.shields.io/badge/discovery-structured-E8B4B8?style=flat-square" alt="Structured Discovery">
+</p>
+
+<p align="center">
+  <sub>v2.0 — 結構化訪談卡、三層 DS 偵測、五維度品味評審、整合 open-design 方法論。</sub>
 </p>
 
 <p align="center">
@@ -72,68 +77,77 @@ Check my site's accessibility.
 
 ---
 
-## :movie_camera: 米蘭達實際運作
+## :movie_camera: 米蘭達實際運作（v2.0 流程）
 
-安裝完成後，直接開始對話就好。米蘭達會立刻接手：
+安裝完成後，直接開始對話就好。米蘭達會立刻接手，跑一套結構化的九階段流程——不再閒聊：
 
 ```text
 你：  我想做一個咖啡店的首頁。
 
-米蘭達：  要用英文還是中文？選一個。我沒那麼多時間。
+米蘭達：  叫我？我是米蘭達。先給我 30 秒。
 
-你：  中文。
+          ┌──────────────────────────────────────────────────────────┐
+          │  訪談卡 — 每行勾一個，貼回來給我。                            │
+          ├──────────────────────────────────────────────────────────┤
+          │  語言：       [ ] English   [ ] 中文                       │
+          │  1. 介面：    [ ] landing  [ ] dashboard  [ ] mobile       │
+          │               [ ] deck  [ ] e-guide  [ ] blog  [x] 其他：  │
+          │               咖啡店首頁  ← 從你的訊息推斷                   │
+          │  2. 受眾：    [ ] B2B  [ ] B2C  [ ] 內部工具  [ ] 個人作品   │
+          │  3. 調性：    [ ] 編輯感  [ ] 極簡  [ ] 科技感               │
+          │               [ ] 暖系  [ ] 粗野                            │
+          │  4. 品牌：    [ ] 有完整 DS  [ ] 只有 logo+色  [ ] 從 0      │
+          │  5. 規模：    [ ] 單頁  [ ] 5-10 頁  [ ] 整站                │
+          └──────────────────────────────────────────────────────────┘
 
-米蘭達：  你要我問得多仔細？我可以好好訪談你——品牌色、目標受眾、
-          全部問過一輪——或是邊做邊說。你決定。
+你：  中文。B2C。編輯感。從 0 開始。單頁。
 
-你：  邊做邊說。
+米蘭達：  品牌從零 → 進入方向選擇器。挑一個字母給我。
 
-米蘭達：  你有現成的品牌色和字體嗎，還是從零開始？
+          A. Editorial    — Iowan Old Style 襯線、墨黑 #111111、單一強調 #B8472A
+          B. Modern Minimal — Inter 無襯線、中性色、強調 #2563EB
+          C. Tech Utility  — JetBrains Mono、終端機色盤
+          D. Soft Warm     — GenSenRounded、腮紅 + 鼠尾草
+          E. Brutalist     — Mono 字體、硬邊框、原生 HTML 感
 
-你：  從零開始。
+你：  A。
 
-米蘭達：  行，我來處理。你要看幾個版本比較，還是信任我直接選？
+米蘭達：  鎖定。執行 Pre-flight...
+          ┌─ 步驟 1：三層 DS 驗證 → 沒有專案檔，全新開始
+          ├─ 步驟 2：grep + normalize hex → 還沒有（白紙一張）
+          ├─ 步驟 3：寫入 brand-spec.md → 從方向 A 鎖定 token
+          └─ 步驟 4：複述 → 「襯線顯示字 + 無襯線內文、墨黑色盤、
+                            單一強調 #B8472A、4px 基礎圓角。」
 
-你：  給我看幾個版本。
+          先給線框 — 灰塊版，30 秒看完，要改方向便宜。
 
-米蘭達：  等一下。
+          [emits 灰塊 wireframe HTML]
 
-          ┌─ Emily（艾蜜莉／視覺總管）：建立色彩系統 + 字體規範...
-          ├─ Serena（瑟琳娜／美術總監）：挑選圖示 + 規劃動畫...
-          ├─ Jocelyn（喬瑟琳／排版工程師）：建構響應式格線...
-          └─ Andy（安迪／上線專員）：準備 metadata + JSON-LD...
+你：  OK，繼續。
 
-          [四位同時以子代理平行作業]
+米蘭達：  派團隊上工。每位子代理 = 一個 TodoWrite 項目。
 
-米蘭達：  好了。我做了 3 個方案：
+          ┌─ Emily（艾蜜莉／視覺總管）：建立 token、字體、色彩
+          ├─ Serena（瑟琳娜／美術總監）：圖示 + 微互動
+          ├─ Jocelyn（喬瑟琳／排版）：響應式格線 + 無障礙
+          └─ Andy（安迪／上線）：meta、OG、JSON-LD
 
-          方案 A — 俐落編輯風。大量留白、襯線標題、攝影主導。
-          適合精品單品咖啡店。
+米蘭達：  build 完成。Victor 執行雙審（18 條技術 + 5 維度品味）...
 
-          方案 B — 溫暖舒適風。圓角、大地色系、手繪圖示點綴。
-          適合社區咖啡廳。
+          ┌─ 技術審計：17/18 通過。1 處對比度自動修正。
+          └─ 品味評審：
+              哲學一致性    8/10  Strong  — 編輯感方向整體一致
+              視覺層級      9/10  Strong  — 顯示字最大、mono 註解讀得出註解
+              細節執行      7/10  Strong  — token 一致，沒有亂跑的 hex
+              功能性        9/10  Strong  — 無障礙完整、表單有驗證
+              創新性        5/10  Functional — 非對稱編輯版面 OK，
+                                            但顯示字可再大膽一點
 
-          方案 C — 大膽現代風。深色背景、銳利字體、強 CTA。
-          適合想走高級感的連鎖品牌。
+          KEEP   — 編輯感字體系統
+          FIX    — （無，已自動處理）
+          QUICK  — 試試 mono 註解 + kicker 眉題，創新性可加 2 分
 
-          選哪個方向？也可以混搭：「A 的版面 + B 的配色」。
-
-你：  A 的版面 + B 的配色。
-
-米蘭達：  合成中...
-
-          ┌─ Victor（維克多／品質督察）：執行品質檢查...
-          │   ✓ 無障礙：WCAG AA 通過
-          │   ✓ AI 味檢測：通過（非對稱版面、有個性）
-          │   ✓ 響應式：手機版驗證完成
-          │   ✓ SEO：title、OG、JSON-LD 齊全
-          │   ✗ 頁尾連結對比度：3.8:1（需要 4.5:1）— 已修正
-          └─ 完成。
-
-米蘭達：  這是你的首頁。頁尾連結對比度只有 3.8:1，不能接受。
-          我已經修好了。不用謝。
-
-          可以部署了。
+          可以部署了。brand-spec.md 已存到 .miranda/ 給下次 session 接手。
 ```
 
 ---
@@ -153,16 +167,20 @@ All-Good-UI 安裝的是 **Miranda（米蘭達）**，一位品味無可挑剔�
 | **Jocelyn（喬瑟琳）** | 排版工程師 | 響應式設計、格線系統、無障礙、鍵盤導覽 |
 | **Andy（安迪）** | 上線專員 | SEO / AIO / GEO / SGE metadata、結構化資料、Core Web Vitals、部署前檢查 |
 
-### :sparkles: 米蘭達能做什麼
+### :sparkles: 米蘭達能做什麼（v2.0）
 
 | 功能 | 說明 |
 | :--- | :--- |
-| 從零打造 | 訪談、產生設計系統、完整建構頁面 |
-| 重新設計現有頁面 | 診斷問題、修正、稽核結果 |
-| 多方案比較 | 產生 3-5 個設計方向，讓你混搭組合 |
-| 自動品質檢查 | 無障礙、AI 味、效能、響應式、SEO——每次建構後自動執行 |
-| 依嚴重程度處理 | 重大問題自動修正，偏好類問題回報給你決定 |
-| 直接上線的成品 | 程式碼可直接部署，SEO、a11y、效能都處理好了 |
+| **訪談卡** | 30 秒的結構化選擇題卡，取代 30 分鐘的來回修正。不再開放式追問。 |
+| **方向選擇器** | 沒品牌時，米蘭達丟出 5 個固定方向給你挑一個字母，token 鎖定。禁止自由發揮配色。 |
+| **Pre-flight 預飛** | 派子代理前必做：三層 DS 驗證、grep + normalize 用色現況、寫入 `brand-spec.md`、把契約複述給你確認。 |
+| **先給線框** | 全力建構前先丟灰塊版面 — 廢稿便宜、改方向便宜。局部模組、修現有頁、線框太小都會自動跳過。 |
+| **多方案比較** | 產生 3-5 個方向給你混搭組合（「A 的版面 + C 的間距」）。 |
+| **18 條技術稽核** | 無障礙、AI 味、效能、響應式、SEO ——每次 build 後自動跑。 |
+| **5 維度品味評審** | 哲學一致性／視覺層級／細節執行／功能性／創新性，各打 0-10 分附證據，最後給 Keep / Fix / Quick-win 三段行動清單。 |
+| **依嚴重程度自動修正** | 重大問題米蘭達自己處理，偏好類問題與創新性決策回報給你。 |
+| **`brand-spec.md` 產出物** | 鎖定的設計契約存進專案，下次 session 直接接手，不用重新訪談。 |
+| **直接上線的成品** | 程式碼可直接部署，SEO、a11y、效能都處理好了。 |
 
 ---
 
@@ -250,19 +268,25 @@ cp ~/.claude/skills/all-good-ui/hooks/miranda-blueprint.md ~/claude-teams-go/blu
 
 ## :brain: 米蘭達的運作方式
 
-米蘭達自動啟動，遵循結構化的工作流程：
+米蘭達自動啟動，遵循結構化的九階段流程：
 
 **階段 0：偵測** -- 掃描你的專案，辨識框架、套件管理器、樣式系統和現有的設計 token。
 
-**階段 1：訪談** -- 先問你偏好的語言（英文或中文），接著問你要多仔細的訪談。快速模式（3-5 個問題）或完整模式（8-12 個問題）。
+**階段 1：訪談卡** -- 一張 5 列選擇題卡（介面／受眾／調性／品牌／規模），pre-fill 規則嚴格（只能引用你當下訊息的字句，不准翻 CLAUDE.md 或記憶）。User-dismiss 逃生口：你說「你看著辦」她就直接做，把猜的部分全標 `[unconfirmed]`，不再煩你。
 
-**階段 2：建構** -- 平行派遣團隊。Emily 負責視覺、Serena 負責動態效果、Jocelyn 負責版面、Andy 負責 SEO。同時作業，不是依序排隊。
+**階段 1.5：方向選擇器** -- 品牌答「從 0」或「只有 logo+色」時觸發。五個固定方向（Editorial / Modern Minimal / Tech Utility / Soft Warm / Brutalist），挑一個字母 → token 鎖定。禁止自由發揮。
 
-**階段 3：自動稽核** -- Victor 自動執行完整品質檢查，涵蓋無障礙、AI 味偵測、動畫效能、響應式行為和 SEO 完整度。
+**階段 1.8：Pre-flight 預飛** -- 四步：(1) 三層 DS 驗證——獨立 token 檔／CSS variables／markdown 文件描述；(2) grep hex 用 `tr` + `awk` normalize，top 20 去重後分組（brand / neutral / dark / state）；(3) 寫入 `brand-spec.md` 鎖定 token 與來源；(4) 複述契約給你聽（3-5 行）。
 
-**階段 4：修正** -- 重大問題立即修正。字體大小偏好和主觀微調則回報給你決定。
+**階段 1.9：線框 pass** -- 全力 build 前先丟灰塊版面。當介面是局部模組、修現有頁、線框少於 30 行 HTML 時自動跳過。
 
-**階段 5：交付** -- 可直接上線的程式碼。
+**階段 2：建構** -- 真正用 Agent 工具平行派遣。每位子代理 = 一個 TodoWrite 項目，狀態 `in_progress` → `completed` 即時串流，你可以中途改方向。
+
+**階段 3a：18 條技術稽核** -- Victor 跑無障礙、AI 味、效能、響應式、SEO、視覺一致性等。第 1-6 條失敗自動修（規則 37）。
+
+**階段 3b：5 維度品味評審** -- 同一輪 Victor 給哲學／層級／細節／功能／創新性各打 0-10 分，輸出 Keep / Fix / Quick-win 三段清單。
+
+**階段 4-5：嚴重程度處理 + 交付** -- 重大問題自動修，偏好類與創新性問題回報。`brand-spec.md` 跟著 build 一起留在專案裡，給下次 session 接手。
 
 ---
 
@@ -279,7 +303,10 @@ cp ~/.claude/skills/all-good-ui/hooks/miranda-blueprint.md ~/claude-teams-go/blu
 
 ```text
 all-good-ui/
-  SKILL.md                        # 主入口——角色設定、工作流程、團隊、指令
+  SKILL.md                        # 主入口——角色設定、9 階段流程、團隊、規則
+  hooks/
+    miranda-trigger.js             # UserPromptSubmit 自動觸發 hook
+    miranda-blueprint.md           # Claude Teams Go 藍圖（選用）
   reference/
     typography.md                  # 字體堆疊、尺寸、行高、載入方式
     color.md                       # 色彩系統、對比度、深色模式、調色科學
@@ -290,10 +317,16 @@ all-good-ui/
     accessibility.md               # WCAG AA、ARIA、鍵盤、焦點管理
     metadata-seo.md                # SEO / AIO / GEO / SGE、結構化資料、OG
     anti-patterns.md               # AI 味檢查清單、設計反模式
+    css-structure.md               # 設計 token、檔案順序、選擇器規則
   workflow/
-    audit.md                       # 完整品質稽核流程（18 個類別）
+    audit.md                       # 18 條技術稽核 + 5 維度品味評審
     design-lab.md                  # 多方案產生與比較
     icons.md                       # 圖示選用 + Better Icons MCP 整合
+
+# 每個專案會自動產出（不在這個 repo 裡）：
+{你的專案}/
+  .miranda/
+    brand-spec.md                  # Pre-flight 階段 1.8 鎖定的 DS 契約
 ```
 
 ---
@@ -302,17 +335,17 @@ all-good-ui/
 
 | English | 中文 | 功能 |
 | :------ | :--- | :--- |
-| "Check this" | 「檢查一下」 | Victor 執行完整稽核 |
+| "Check this" | 「檢查一下」 | Victor 執行完整稽核（18 條技術 + 5 維度品味） |
 | "Build a page" | 「做一個頁面」 | 從階段 1 開始完整建構 |
 | "Fix this" | 「修這個」 | 米蘭達診斷並修正 |
 | "Show me options" | 「給我看幾個版本」 | 產生 3-5 個方案比較 |
 | "Be the boss" | 「你當老大」 | 切換到老大模式 |
 | "Just advise" | 「你當顧問」 | 切換到顧問模式 |
-| "Quick start" | 「快速開始」 | 最少訪談，直接開工 |
-| "Full interview" | 「完整訪談」 | 完整模式，什麼都問 |
-| "Set up my design system" | 「幫我建設計規範」 | 從零產生品牌規範 |
+| "Set up my design system" | 「幫我建設計規範」 | 階段 1.5 方向選擇器 + 1.8 brand-spec |
+| "Wireframe first" | 「先給我線框」 | 直接跳到階段 1.9 灰塊線框 |
+| "Just do it" / "you decide" | 「你看著辦」「不要再問」 | User-dismiss 逃生口——米蘭達把猜的部分標 `[unconfirmed]` 直接做 |
 | "Deploy check" | 「部署前檢查」 | Andy 執行部署前稽核 |
-| "Too much AI" | 「AI 味太重」 | Victor 掃描 AI 味模式 |
+| "Too much AI" | 「AI 味太重」 | Victor 掃描 AI 味模式 + 品味評審 |
 
 ---
 
@@ -335,11 +368,40 @@ all-good-ui/
 **為什麼用角色而不是只寫規則？**
 文件裡的規則會被跳過。一個有主見的角色才會被遵守。米蘭達不只列出哪裡有問題——她帶著態度修好它。這讓產出有記憶點，也更一致。
 
+**為什麼用結構化訪談卡（v2.0）？**
+開放式追問會浪費 30 分鐘來回修。一張 5 列選擇題卡只要 30 秒。走錯方向的代價應該是一回合對話，而不是一整個 build 報廢。借用 open-design 的「RULE 1 — form before code」。
+
+**為什麼用方向選擇器而不是自由發揮配色？**
+使用者沒品牌時，自由發揮配色是 AI 味的最大來源。五個固定方向（Editorial / Minimal / Tech Utility / Soft Warm / Brutalist）給米蘭達一個確定答案，而不是猜測。
+
+**為什麼三層 DS 偵測？**
+設計系統有三種樣貌：獨立 token 檔、散在樣式表的 CSS variables、寫在 CLAUDE.md／專案文件裡的描述。只查第一種會錯過真實的 DS 規範，被迫退回自由發揮。
+
+**為什麼 build 前先給線框？**
+廢一張線框成本是一回合，廢 1000 行程式碼成本是一整晚。灰塊讓版面缺陷無所遁形——色彩和字體會把眼睛從結構問題上騙走。當既有版面已經充當線框時自動跳過。
+
 **為什麼用子代理？**
-設計同時觸及很多領域——色彩、版面、無障礙、SEO。透過專門的代理平行處理，比單一回合跑完所有東西更快、更徹底。
+設計同時觸及很多領域——色彩、版面、無障礙、SEO。透過專門的代理平行處理，比單一回合跑完所有東西更快、更徹底。每位子代理對應一個 TodoWrite 項目，你可以中途改方向。
+
+**為什麼除了技術稽核還要 5 維度品味評審？**
+技術通過／不通過只告訴你程式碼能不能跑，沒告訴你做得好不好。哲學／層級／細節／功能／創新 五維度各打 0-10 分，給你有證據支持的判決，告訴你成品是會被記住還是會被遺忘。
 
 **為什麼要「AI 味偵測」？**
 AI 做的 UI 最大的破綻就是看起來像 AI 做的。完美對稱、通用的三欄卡片、安全的藍灰色調。米蘭達的團隊會專門檢查這些模式，然後打破它們。
+
+---
+
+## :warning: 已知稽核盲區
+
+米蘭達的稽核很犀利但不是萬能。讓她自動修「P0」前先檢查這些陷阱：
+
+| 症狀 | 真相可能是 | 怎麼驗證 |
+| :--- | :----------- | :------- |
+| 兩個相似 hex 被判定為「色彩漂移」 | 那其實是刻意的深色模式提亮色（例如 `#D4A0A4` 是 `#D4A5A5` 在深色模式的提亮版本） | `grep` 那個被疑色 — 只出現在 `dark-mode.css` / `*-dark.css` 就是刻意的，不是漂移 |
+| Tier A 找不到 DS token | 專案可能把 DS 寫在 `dark-mode.css`、`theme-*.css`、`*-tokens.css` 這類非標準檔名 | 退回 Phase 1.5 方向選擇器前，先手動 Glob 這些 pattern |
+| top 20 裡 `#fff` 和 `#ffffff` 同時出現 | 舊版本 normalization bug — v2.0 已用 `tr 'a-f' 'A-F'` 修好 | 重跑 v2.0 pipeline，它們會合併成同一個 `#FFFFFF` |
+
+**鐵則**：階段 4 讓米蘭達自動 silent-fix 前瞄一下 Fix 清單。任何動到色彩 token 的修法都值得花 5 秒 `grep` 確認。
 
 ---
 
@@ -355,6 +417,7 @@ AI 做的 UI 最大的破綻就是看起來像 AI 做的。完美對稱、通用
 | UI Skills | 基礎 UI、無障礙、metadata、動畫效能 | [Website](https://www.ui-skills.com/) |
 | Better Icons | 200k+ 圖示搜尋（透過 MCP） | [GitHub](https://github.com/better-auth/better-icons) |
 | Design Plugin | 多方案比較、回饋收集工作流程 | [GitHub](https://github.com/0xdesign/design-plugin) |
+| **open-design**（v2.0） | 訪談卡 + 方向選擇器 + Pre-flight 預飛 + 5 維度評審方法論——形塑米蘭達 v2.0 的六個核心觀念 | [GitHub](https://github.com/fishtvlvoe/open-design) |
 
 ---
 
